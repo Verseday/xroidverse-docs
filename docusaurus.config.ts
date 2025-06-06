@@ -19,12 +19,12 @@ const config: Config = {
   url: 'https://verseday.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/xroidverse.github.io/',
+  baseUrl: '/xroidverse-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Verseday', // Usually your GitHub org/user name.
-  projectName: 'xroidverse.github.io', // Usually your repo name.
+  projectName: 'xroidverse-docs', // Usually your repo name.
   deploymentBranch: 'gh-pages', // The branch that GitHub Pages will deploy from
   trailingSlash: false,
 
@@ -48,7 +48,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Verseday/xroidverse.github.io/tree/main/',
+            'https://github.com/Verseday/xroidverse-docs/tree/main/',
         },
         blog: false,
         pages: {
@@ -85,7 +85,7 @@ const config: Config = {
           label: '開発者ガイド',
         },
         {
-          href: 'https://github.com/Verseday/xroidverse.github.io',
+          href: 'https://github.com/Verseday/xroidverse-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -108,11 +108,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Issues',
-              href: 'https://github.com/Verseday/xroidverse.github.io/issues',
+              href: 'https://github.com/Verseday/xroidverse-docs/issues',
             },
             {
               label: 'Discussions',
-              href: 'https://github.com/Verseday/xroidverse.github.io/discussions',
+              href: 'https://github.com/Verseday/xroidverse-docs/discussions',
             },
           ],
         },
@@ -121,7 +121,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/Verseday/xroidverse.github.io',
+              href: 'https://github.com/Verseday/xroidverse-docs',
             },
           ],
         },
