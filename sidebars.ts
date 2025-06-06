@@ -13,12 +13,12 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-  // XroidVerseドキュメントのサイドバー
+  // XroidVerseユーザーマニュアルのサイドバー
   mainSidebar: [
     'intro',
     {
       type: 'category',
-      label: '📖 ユーザーマニュアル',
+      label: '📖 操作マニュアル',
       collapsed: false,
       items: [
         'user-manual',
@@ -26,70 +26,55 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '👨‍💻 開発者ガイド',
+      label: '⚙️ システム設定',
       collapsed: false,
       items: [
         {
           type: 'category',
-          label: '🏗️ アーキテクチャ',
+          label: '👤 キャラクター設定',
           collapsed: false,
           items: [
-            'architecture',
+            'tutorials/character-setup/character-addition-guide',
           ],
         },
         {
           type: 'category',
-          label: '📚 チュートリアル',
+          label: '😊 表情設定',
           collapsed: false,
           items: [
-            {
-              type: 'category',
-              label: '👤 キャラクター設定',
-              collapsed: false,
-              items: [
-                'tutorials/character-setup/character-addition-guide',
-              ],
-            },
-            {
-              type: 'category',
-              label: '😊 表情設定',
-              collapsed: false,
-              items: [
-                'tutorials/expression-setup/facial-expression-guide',
-              ],
-            },
-            {
-              type: 'category',
-              label: '🎭 モーション設定',
-              collapsed: false,
-              items: [
-                'tutorials/motion-setup/animation-guide',
-              ],
-            },
-            {
-              type: 'category',
-              label: '🖼️ 画像ディスプレイ設定',
-              collapsed: false,
-              items: [
-                'tutorials/image-display-setup/image-display-setup-guide',
-              ],
-            },
-            {
-              type: 'category',
-              label: '📺 動画ディスプレイ設定',
-              collapsed: false,
-              items: [
-                'tutorials/video-display-setup/video-display-setup-guide',
-              ],
-            },
-            {
-              type: 'category',
-              label: '📷 カメラ設定',
-              collapsed: false,
-              items: [
-                'tutorials/camera-setup/camera-setup-guide',
-              ],
-            },
+            'tutorials/expression-setup/facial-expression-guide',
+          ],
+        },
+        {
+          type: 'category',
+          label: '🎭 モーション設定',
+          collapsed: false,
+          items: [
+            'tutorials/motion-setup/animation-guide',
+          ],
+        },
+        {
+          type: 'category',
+          label: '🖼️ 画像ディスプレイ設定',
+          collapsed: false,
+          items: [
+            'tutorials/image-display-setup/image-display-setup-guide',
+          ],
+        },
+        {
+          type: 'category',
+          label: '📺 動画ディスプレイ設定',
+          collapsed: false,
+          items: [
+            'tutorials/video-display-setup/video-display-setup-guide',
+          ],
+        },
+        {
+          type: 'category',
+          label: '📷 カメラ設定',
+          collapsed: false,
+          items: [
+            'tutorials/camera-setup/camera-setup-guide',
           ],
         },
       ],
