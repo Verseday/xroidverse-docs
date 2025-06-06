@@ -1,12 +1,9 @@
-import {useEffect} from 'react';
-import {useHistory} from '@docusaurus/router';
+import React from 'react';
+import {Redirect} from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function Home(): null {
-  const history = useHistory();
-
-  useEffect(() => {
-    history.replace('/docs/intro');
-  }, [history]);
-
-  return null;
+export default function Home(): React.JSX.Element {
+  const {siteConfig} = useDocusaurusContext();
+  const introUrl = `${siteConfig.baseUrl}docs/intro`;
+  return <Redirect to={introUrl} />;
 }
