@@ -16,15 +16,17 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://xroidverse-docs.verseday.com',
+  url: 'https://verseday.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/xroidverse.github.io/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Verseday', // Usually your GitHub org/user name.
-  projectName: 'XroidVerse', // Usually your repo name.
+  projectName: 'xroidverse.github.io', // Usually your repo name.
+  deploymentBranch: 'gh-pages', // The branch that GitHub Pages will deploy from
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,7 +48,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Verseday/XroidVerse/tree/master/dev-docs/',
+            'https://github.com/Verseday/xroidverse.github.io/tree/main/',
         },
         blog: false,
         pages: {
@@ -83,7 +85,7 @@ const config: Config = {
           label: '開発者ガイド',
         },
         {
-          href: 'https://github.com/Verseday/XroidVerse',
+          href: 'https://github.com/Verseday/xroidverse.github.io',
           label: 'GitHub',
           position: 'right',
         },
@@ -106,11 +108,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Issues',
-              href: 'https://github.com/Verseday/XroidVerse/issues',
+              href: 'https://github.com/Verseday/xroidverse.github.io/issues',
             },
             {
               label: 'Discussions',
-              href: 'https://github.com/Verseday/XroidVerse/discussions',
+              href: 'https://github.com/Verseday/xroidverse.github.io/discussions',
             },
           ],
         },
@@ -119,7 +121,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/Verseday/XroidVerse',
+              href: 'https://github.com/Verseday/xroidverse.github.io',
             },
           ],
         },
