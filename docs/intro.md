@@ -1,18 +1,19 @@
 ---
 sidebar_position: 1
 title: はじめに
-description: XroidVerse開発者ドキュメントの概要とクイックスタートガイド
-keywords: [XroidVerse, Unreal Engine 5, MetaHuman, 開発ガイド]
+description: XroidVerseドキュメントの概要とクイックスタートガイド
+keywords: [XroidVerse, Unreal Engine 5, MetaHuman, AI録画システム, 操作マニュアル, 開発ガイド]
 ---
 
-# XroidVerse 開発者ドキュメント
+# XroidVerse ドキュメント
 
-**XroidVerse**プロジェクトの開発者向けドキュメントへようこそ！
+**XroidVerse**プロジェクトのドキュメントサイトへようこそ！
 
-このサイトでは、Unreal Engine 5で構築されたゲーム「XroidVerse」の開発に必要な情報を提供しています。
+このサイトでは、Unreal Engine 5で構築されたAI録画システム「XroidVerse」の使用方法と開発に関する情報を提供しています。
 
 :::info プロジェクト概要
-XroidVerseは、**Unreal Engine 5**、**MetaHuman**、**AI対話システム**を組み合わせた革新的なゲームプロジェクトです。
+XroidVerseは、**Unreal Engine 5**、**MetaHuman**、**AI対話システム**を組み合わせた革新的なAI録画システムです。
+Xroid Studioで作成したシナリオを再生し、その様子を高品質で録画することができます。
 :::
 
 ## 🎯 このドキュメントについて
@@ -25,32 +26,63 @@ import DocCardList from '@theme/DocCardList';
 
 ### 🎯 対象読者
 
-- **プロジェクト開発者**: コードベースの理解が必要な方
-- **新規参加者**: プロジェクト構造を学びたい方
-- **アーキテクト**: システム設計を理解したい方
+このドキュメントは、以下の方々を対象としています：
 
-## 🏗️ プロジェクト概要
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-XroidVerseは以下の特徴を持つプロジェクトです：
+<Tabs>
+  <TabItem value="users" label="ユーザー" default>
+    #### 👤 ソフトウェア利用者
+    - **クリエイター**: XroidVerseを使って映像コンテンツを制作したい方
+    - **動画制作者**: AIシナリオの録画・配信を行いたい方
+    - **一般ユーザー**: XroidVerseの基本的な操作方法を学びたい方
+    
+    👉 [操作マニュアルから始める](./user-manual)
+  </TabItem>
+  <TabItem value="developers" label="開発者">
+    #### 👨‍💻 システム開発者
+    - **プロジェクト開発者**: コードベースの理解が必要な方
+    - **新規参加者**: プロジェクト構造を学びたい方
+    - **アーキテクト**: システム設計を理解したい方
+    
+    👉 [アーキテクチャガイドから始める](./architecture)
+  </TabItem>
+</Tabs>
+
+## 🚀 XroidVerse とは
+
+XroidVerseは以下の特徴を持つシステムです：
 
 | 項目 | 詳細 |
 |------|------|
 | **エンジン** | Unreal Engine 5 |
-| **アーキテクチャ** | モジュラー設計 |
-| **開発言語** | C++（ブループリントは見た目のみ） |
-| **AI機能** | 対話システム、コンテンツ生成 |
+| **主要機能** | AI対話シナリオの再生・録画 |
 | **キャラクター** | MetaHuman統合 |
+| **出力形式** | 高品質映像ファイル（MP4） |
+| **対応録画** | 内部録画機能・外部録画（OBS等） |
 
-## 🚀 クイックスタート
+## 🗺️ ドキュメント構成
 
-### 1. アーキテクチャを理解する
-まずは[アーキテクチャガイド](./architecture)でプロジェクトの全体構造を把握しましょう。
+### 👤 ユーザー向けコンテンツ
 
-### 2. 実践的なチュートリアル
-具体的な実装については、各チュートリアルを参照してください：
+**すぐにXroidVerseを使い始めたい方**は、以下から始めてください：
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+- 📖 [**操作マニュアル**](./user-manual): ソフトウェアの基本的な使用方法
+- 🎬 録画方法の選択（内部録画・OBS録画）
+- 🔐 Firebase認証とシナリオダウンロード
+- 🎮 シナリオ再生と操作方法
+- 🔧 トラブルシューティング
+
+### 👨‍💻 開発者向けコンテンツ
+
+**システムの技術的詳細や開発に参加したい方**は、以下をご覧ください：
+
+#### 1. システム理解
+- 🏗️ [**アーキテクチャガイド**](./architecture): プロジェクト全体構造の把握
+
+#### 2. 実装ガイド
+具体的な機能実装については、各チュートリアルを参照してください：
 
 <Tabs>
   <TabItem value="character" label="キャラクター設定" default>

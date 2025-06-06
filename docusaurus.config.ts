@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'XroidVerse 開発者ドキュメント',
-  tagline: 'Unreal Engine 5 ゲーム開発ガイド',
+  title: 'XroidVerse ドキュメント',
+  tagline: 'Unreal Engine 5 AI録画システム',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -80,9 +80,9 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'developerSidebar',
+          sidebarId: 'mainSidebar',
           position: 'left',
-          label: '開発者ガイド',
+          label: 'ドキュメント',
         },
         {
           href: 'https://github.com/Verseday/xroidverse-docs',
