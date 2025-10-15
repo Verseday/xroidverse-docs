@@ -390,18 +390,18 @@ Content Browser で、`/All/Content/MetaHumans/自分のキャラ名/BP_RTG_Mane
 
 #### タグ設定
 
-配置後、そのキャラクターを選択している状態で、Details パネル内で「**tags**」で検索し、**Actor セクション内の** Tags の右の **＋** ボタンを押して、**Person_番号** という形式で番号を付けます。
+配置後、そのキャラクターを選択している状態で、Details パネル内で「**tags**」で検索し、**Actor セクション内の** Tags の右の **＋** ボタンを押して、**Person_キャラクター名** という形式で名前を付けます。
 
 ![AIキャラクターのタグ設定](/img/docs/character-setup/UE5.5-/26-character-tags-setting.png)
 
 例：
-- `Person_0`
-- `Person_1`
-- `Person_2`
+- `Person_Brian`
+- `Person_Alina`
+- `Person_キャラクター名`
 - ...
 
 :::warning 重要
-ここで付けた番号と、JSON内の Person キーの番号が対応します。
+ここで付けた名前と、JSON内の Person キーの文字列が対応します。
 :::
 
 </details>
