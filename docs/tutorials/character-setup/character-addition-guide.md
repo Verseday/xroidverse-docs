@@ -153,6 +153,10 @@ Assembly タブに切り替え、以下を設定して「Assemble」を押しま
 
 ![最終表示](/img/docs/character-setup/UE5.6+/19-final-viewport.png)
 
+:::tip 次のステップ
+キャラクターのセットアップが完了しました。次は、下記の「レベルへの配置と設定」に進んでください。
+:::
+
 </details>
 
 <details>
@@ -373,15 +377,25 @@ Content Browser で、`/All/Content/MetaHumans/自分のキャラ名/BP_RTG_Mane
 
 ![ブループリントのリネーム](/img/docs/character-setup/UE5.5-/24-blueprint-rename.png)
 
+:::tip 次のステップ
+キャラクターのセットアップが完了しました。次は、下記の「レベルへの配置と設定」に進んでください。
+:::
+
+</details>
+
 ---
 
-## 🎮 Step 6: レベルへの配置と設定
+## 🎮 レベルへの配置と設定
 
-### 6.1 レベルへの配置
+:::note 全バージョン共通
+このセクションは、UE5.6以上・UE5.5以下のどちらのバージョンでも共通の手順です。
+:::
+
+### レベルへの配置
 
 リネームしたブループリントをレベル内の好きな場所にドラッグ&ドロップで配置します。
 
-### 6.2 キャラクターの操作設定
+### キャラクターの操作設定
 
 キャラクターをAIに操作させるか、人間に操作させるかによって設定方法が異なります。
 
@@ -430,6 +444,4 @@ Outliner で **A_LevelInfo** を検索してクリックして選択状態にし
 ## 📚 関連ドキュメント
 
 - [表情設定ガイド](../expression-setup/facial-expression-guide)
-- [モーション設定ガイド](../motion-setup/animation-guide) 
-
-</details>
+- [モーション設定ガイド](../motion-setup/animation-guide)
