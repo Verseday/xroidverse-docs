@@ -137,18 +137,12 @@ Assembly タブに切り替え、以下を設定して「Assemble」を押しま
 
 ![Face Animation Class設定](/img/docs/character-setup/UE5.6+/23-face-anim-class.png)
 
-### 2.12 タグ用のコンポーネントのコピー
-- Content Browser で `/All/Content/MetaHumans` 内の任意のキャラクターの `BP_RTG_Manequinn_*` を開く（例：`/All/Content/MetaHumans/RoidM/BP_RTG_Manequinn_RoidM`）
-- Components の `CA_Tag` をコピーし、自分のキャラの Components の `Capsule Component (CollisionCylinder)` の子として貼り付け
-
-![CA_Tag のコピー](/img/docs/character-setup/UE5.6+/17-copy-ca-tag.png)
-
-### 2.13 表情イベントのコピー
+### 2.12 表情イベントのコピー
 - 参照元キャラの `Event SetFacialExpression` グラフをコピーし、自分のキャラの `EventGraph` に貼り付け
 
 ![Event SetFacialExpression のコピー](/img/docs/character-setup/UE5.6+/18-copy-event-setfacialexpression.png)
 
-### 2.14 表示確認
+### 2.13 表示確認
 - 設定完了。`Viewport` タブでキャラクターが適切に表示されていれば成功です。
 
 ![最終表示](/img/docs/character-setup/UE5.6+/19-final-viewport.png)
