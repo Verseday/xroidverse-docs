@@ -35,6 +35,7 @@ const sidebars: SidebarsConfig = {
           collapsed: false,
           items: [
             'tutorials/character-setup/character-addition-guide',
+            'tutorials/character-setup/person-slot-guide',
           ],
         },
         {

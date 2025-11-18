@@ -385,18 +385,66 @@ Content Browser で、`/All/Content/MetaHumans/自分のキャラ名/BP_RTG_Mane
 このセクションは、UE5.6以上・UE5.5以下のどちらのバージョンでも共通の手順です。
 :::
 
-### レベルへの配置
+### Step 1: Person Identifier の登録
 
-リネームしたブループリントをレベル内の好きな場所にドラッグ&ドロップで配置します。
+キャラクターを動的に配置できるようにするため、キャラクターの識別子とクラスの対応付けを登録します。
 
-### キャラクターの操作設定
+#### 1.1 Project Settings を開く
+
+1. メニューバーから **Edit** → **Project Settings** を選択
+2. 左側のリストから **Project** → **XroidVerse Content Generation** を選択
+3. **Person** セクションを探す
+
+#### 1.2 Person Identifier to Character Class Map にエントリーを追加
+
+1. **Person Identifier to Character Class Map** の **+** ボタンを押す
+2. **左側** にキャラクターの識別子を入力（例：`MyCharacter`）
+3. **右側** に作成したキャラクターのブループリントクラスを設定（例：`BP_RTG_Manequinn_MyCharacter`）
+
+![Person Identifier の登録](/img/docs/character-setup/common/person-identifier-mapping.png)
+
+:::info 識別子の用途
+ここで設定した識別子は、以下の場所で使用されます：
+- PersonSlot のエディタープレビュー
+- Xroid Studio からの動的キャラクター配置
+- レベル内のキャラクター指定（`Person_識別子` タグ）
+:::
+
+---
+
+### Step 2: CameraFocusMarker の位置調整
+
+**CameraFocusMarker** は、キャラクター内でカメラ(StudioCameraActor)のフォーカス位置を示すための軽量マーカーアクターです。
+
+このマーカーは、カメラがキャラクターの顔(など)を正確に追跡するために使用されます。カメラがキャラクターにフォーカスする際、このマーカーの位置にピントや向きを合わせます。次の手順で、その位置を調整してください。
+
+1. Components パネルで `Camera Focus Marker` を選択
+2. Viewport で、カメラを向けたり、フォーカスしたい位置に調整
+
+:::info カメラとの連携
+StudioCameraActor は、この CameraFocusMarker を追跡することで、キャラクターの顔を正確にフォーカスできます。詳細は [カメラ設定ガイド](../camera-setup/camera-setup-guide) を参照してください。
+:::
+
+---
+
+### Step 3: レベルへの配置と操作設定（オプション）
+
+:::note このステップについて
+このステップはオプションです。PersonSlot を使用してキャラクターを動的に配置する場合は、このステップ全体をスキップできます。PersonSlot については [キャラクター動的指定(PersonSlot)ガイド](./person-slot-guide) を参照してください。
+:::
+
+#### 3.1 レベルへの配置
+
+作成したキャラクターをレベル内の好きな場所にドラッグ&ドロップで配置します。
+
+#### 3.2 キャラクターの操作設定
 
 キャラクターをAIに操作させるか、人間に操作させるかによって設定方法が異なります。
 
 <details>
 <summary>AIに操作させる場合</summary>
 
-#### タグ設定
+##### タグ設定
 
 配置後、そのキャラクターを選択している状態で、Details パネル内で「**tags**」で検索し、**Actor セクション内の** Tags の右の **＋** ボタンを押して、**Person_キャラクター名** という形式で名前を付けます。
 
@@ -417,7 +465,7 @@ Content Browser で、`/All/Content/MetaHumans/自分のキャラ名/BP_RTG_Mane
 <details>
 <summary>人間に操作させる場合</summary>
 
-#### LevelInfo設定
+##### LevelInfo設定
 
 Outliner で **A_LevelInfo** を検索してクリックして選択状態にし、Details パネルの **Default** セクション内の **User Input Lip Sync Character** に先ほど配置したキャラクターを設定します。
 
@@ -433,9 +481,11 @@ Outliner で **A_LevelInfo** を検索してクリックして選択状態にし
 これでMetaHumanキャラクターの追加と設定が完了しました。キャラクターがレベル内に正しく配置され、適切なタグが設定されていれば、プロジェクト内で使用できる状態になります。
 :::
 
-
+---
 
 ## 📚 関連ドキュメント
 
+- [キャラクター動的指定(PersonSlot)ガイド](./person-slot-guide) - PersonSlot を使用した動的指定
 - [表情設定ガイド](../expression-setup/facial-expression-guide)
 - [モーション設定ガイド](../motion-setup/animation-guide)
+- [カメラ設定ガイド](../camera-setup/camera-setup-guide) - StudioCameraActor と CameraFocusMarker の連携

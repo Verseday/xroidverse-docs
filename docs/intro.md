@@ -65,10 +65,15 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="character" label="キャラクター設定" default>
-    MetaHumanの統合と設定方法を学習します。
+  <TabItem value="character" label="キャラクター追加" default>
+    MetaHumanの作成と追加方法を学習します。
     
-    👉 [キャラクター設定ガイド](./tutorials/character-setup/character-addition-guide)
+    👉 [キャラクター追加ガイド](./tutorials/character-setup/character-addition-guide)
+  </TabItem>
+  <TabItem value="personslot" label="キャラクター動的指定設定">
+    PersonSlotを使用したキャラクターの動的指定方法を学習します。
+    
+    👉 [キャラクター動的指定(PersonSlot)ガイド](./tutorials/character-setup/person-slot-guide)
   </TabItem>
   <TabItem value="expression" label="表情設定">
     顔の表情制御システムの設定方法を学習します。
