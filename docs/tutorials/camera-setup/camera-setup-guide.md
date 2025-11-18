@@ -96,7 +96,7 @@ StudioCameraActor は、PersonSlot を指定することで、そのスロット
 :::info Focus Target の動作
 - PersonSlot にキャラクターが配置されると、そのキャラクターの CameraFocusMarker にフォーカスが自動設定されます
 - キャラクターの顔などの特定部位を追跡できます
-- CameraFocusMarker の詳細は [キャラクター追加ガイド](../character-setup/character-addition-guide#camerafocusmarker-の位置調整) を参照してください
+- CameraFocusMarker の詳細は [キャラクター追加ガイド](../character-setup/character-addition-guide#step-2-camerafocusmarker-の位置調整) を参照してください
 :::
 
 ### 3.2 Look at Target Person Slot の設定
@@ -111,7 +111,7 @@ StudioCameraActor は、PersonSlot を指定することで、そのスロット
 - PersonSlot にキャラクターが配置されると、そのキャラクターの CameraFocusMarker の位置にカメラが向きます
 - キャラクターが移動しても、カメラは常にキャラクターの CameraFocusMarker の位置に向き続けます
 - Focus Target と異なる PersonSlot を指定することも可能
-- CameraFocusMarker の詳細は [キャラクター追加ガイド](../character-setup/character-addition-guide#camerafocusmarker-の位置調整) を参照してください
+- CameraFocusMarker の詳細は [キャラクター追加ガイド](../character-setup/character-addition-guide#step-2-camerafocusmarker-の位置調整) を参照してください
 :::
 
 ---
@@ -160,4 +160,3 @@ StudioCameraActor では、ズームイン/ズームアウト時の焦点距離�
 
 - [キャラクター動的指定(PersonSlot)ガイド](../character-setup/person-slot-guide) - PersonSlot を使用した動的指定
 - [キャラクター追加ガイド](../character-setup/character-addition-guide) - 新しいキャラクターの追加方法
-- [Firebase Realtime Database 統合](../../firebase-integration) - Firebase との連携仕様 

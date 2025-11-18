@@ -110,7 +110,7 @@ PersonSlot には矢印コンポーネントが表示され、キャラクター
 
 StudioCameraActor は、PersonSlot に配置されたキャラクターを自動的に追跡できます。
 
-詳細は [カメラ設定ガイド](../camera-setup/camera-setup-guide#studiocameraactor-の設定) を参照してください。
+詳細は [カメラ設定ガイド](../camera-setup/camera-setup-guide#-step-3-フォーカス対象の設定オプション) を参照してください。
 
 ---
 
