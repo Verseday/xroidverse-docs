@@ -193,24 +193,19 @@ AnimMontageは、ゲーム内でアニメーションを制御するために必
 
 ## ⚙️ Step 6: プロジェクトへの統合
 
-### 6.1 PersonMotionProcessorの編集
+### 6.1 Project Settingsでの設定
 
-`/All/Content/Xroid/Processors/Processors/A_PersonMotionProcessor` をダブルクリックで開きます。
+最後に、新しいモーションをプロジェクトで使用できるように設定します：
 
-### 6.2 Montage Table変数の選択
+1. メニューバーから **Edit** → **Project Settings** を開く
+2. 左側のサイドバーで **Project** → **XroidVerse Content Generation** を選択
+3. **Motion** セクション内の **Motion Animations** の右側にある **+** ボタンを押す
+4. 新しく追加された要素に、先ほど作成した AnimMontage を設定
 
-画面左下の **My Blueprint** パネルから、**VARIABLES** → **Private Constant** → **Montage Table** を選択します。
-
-![Montage Table選択](/img/docs/motion-setup/15-montage-table-selection.png)
-
-### 6.3 新しいアニメーションの追加
-
-右の **Details** パネルの **Default Value** セクションの **Montage Table** 右の **+** ボタンを押し、新しく追加したアニメーションを追加します。
-
-![アニメーション追加](/img/docs/motion-setup/16-add-animation-to-table.png)
+![Motion Animations設定](/img/docs/motion-setup/17-project-settings-motion-animations.png)
 
 :::warning 重要な番号対応
-ここで Index [5] のように [ ] の中に書かれている数字が、JSON内の person-motion タイプの motion キーの番号に対応します。この番号を覚えておいてください。
+Index [0]、[1]、[2] のように配列のインデックス番号が、JSON内の person-motion タイプの motion キーの番号に対応します。この番号を覚えておいてください。
 :::
 
 ---
