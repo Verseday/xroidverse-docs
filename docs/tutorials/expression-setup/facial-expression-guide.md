@@ -159,21 +159,19 @@ Sequencer 内の **Face** を右クリックして、**Bake Animation Sequence**
 
 ## ⚙️ Step 5: プロジェクトへの統合
 
-### 5.1 PersonExpressionProcessorでの設定
+### 5.1 Project Settingsでの設定
 
 最後に、新しい表情をプロジェクトで使用できるように設定します：
 
-1. `/All/Content/Xroid/Processors/Processors/A_PersonExpressionProcessor` をダブルクリックで開く
+1. メニューバーから **Edit** → **Project Settings** を開く
+2. 左側のサイドバーで **Project** → **XroidVerse Content Generation** を選択
+3. **Facial Expression** セクション内の **Expression Animations** の右側にある **+** ボタンを押す
+4. 新しく追加された要素に、先ほど作成した **AS_表情名** のAnimation Sequenceを設定
 
-![PersonExpressionProcessor開く](/img/docs/expression-setup/14-person-expression-processor.png)
-
-2. 画面左下の **My Blueprint** パネルで、**VARIABLES** → **Private Constant** → **Expression Table** を選択
-3. 画面右の **Details** パネル内の **Default Value** セクション内の **Expression Table** 右の **+** ボタンを押し、先ほど作成した **AS_表情名** という新しい表情を追加
-
-![Expression Table追加](/img/docs/expression-setup/13-expression-table-add.png)
+![Expression Animations設定](/img/docs/expression-setup/15-project-settings-expression-animations.png)
 
 :::warning 重要な番号対応
-Index [6] のように [ ] の中に書かれている数字が、JSONのperson-expressionタイプのexpressionキーの番号に対応します。この番号を覚えておいてください。
+Index [0]、[1]、[2] のように配列のインデックス番号が、JSONのperson-expressionタイプのexpressionキーの番号に対応します。この番号を覚えておいてください。
 :::
 
 ---
