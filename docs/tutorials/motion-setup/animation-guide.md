@@ -112,12 +112,12 @@ Mixamo で **UPLOAD CHARACTER** ボタンを押し、先ほどのエクスプロ
 
 ![ダウンロード設定](/img/docs/motion-setup/10-download-settings.png)
 
-| 設定項目 | 推奨値 | 理由 |
-|----------|--------|------|
-| **Format** | FBX Binary (.fbx) | UE5との互換性 |
-| **Skin** | Without Skin | キャラクターメッシュは不要 |
-| **Frames per Second** | 30 | UE5での安定性 |
-| **Keyframe Reduction** | none | データの完全性保持 |
+| 設定項目               | 推奨値            | 理由                       |
+| ---------------------- | ----------------- | -------------------------- |
+| **Format**             | FBX Binary (.fbx) | UE5との互換性              |
+| **Skin**               | Without Skin      | キャラクターメッシュは不要 |
+| **Frames per Second**  | 30                | UE5での安定性              |
+| **Keyframe Reduction** | none              | データの完全性保持         |
 
 :::warning フレームレートについて
 60FPSだとインポート時にエラーが起こる場合があるため、30FPSを推奨します。
@@ -166,12 +166,12 @@ FBX Import Options ダイアログが表示されたら、以下のように設�
 ![インポート設定](/img/docs/motion-setup/13-import-settings.png)
 
 :::info 重要な設定項目
-| 設定項目 | 設定値 | 説明 |
-|----------|--------|------|
-| **Skeleton** | SK_Mannequin | 使用するスケルトン |
-| **Use Default Sample Rate** | ✅ チェック | デフォルトサンプルレート使用 |
-| **Import Bone Tracks** | ✅ チェック | ボーントラックをインポート |
-| **Delete Existing Morph Target Curves** | ❌ チェック外す | 既存のモーフターゲットカーブを保持 |
+| 設定項目                                          | 設定値         | 説明                                 |
+| ------------------------------------------------- | -------------- | ------------------------------------ |
+| **Skeleton**                                      | SK_Mannequin   | 使用するスケルトン                   |
+| **Use Default Sample Rate**                       | ✅ チェック     | デフォルトサンプルレート使用         |
+| **Import Bone Tracks**                            | ✅ チェック     | ボーントラックをインポート           |
+| **Delete Existing Morph Target Curves**           | ❌ チェック外す | 既存のモーフターゲットカーブを保持   |
 | **Do not import curves with only default values** | ❌ チェック外す | デフォルト値のみのカーブもインポート |
 :::
 
