@@ -56,18 +56,10 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: '🖼️ 画像ディスプレイ設定',
+          label: '🖥️ メディアディスプレイ設定',
           collapsed: false,
           items: [
-            'tutorials/image-display-setup/image-display-setup-guide',
-          ],
-        },
-        {
-          type: 'category',
-          label: '📺 動画ディスプレイ設定',
-          collapsed: false,
-          items: [
-            'tutorials/video-display-setup/video-display-setup-guide',
+            'tutorials/media-display-setup/media-display-setup-guide',
           ],
         },
         {

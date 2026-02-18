@@ -88,6 +88,5 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 その他の設定項目：
-- 🖼️ [画像ディスプレイ設定](./tutorials/image-display-setup/image-display-setup-guide)
-- 📺 [動画ディスプレイ設定](./tutorials/video-display-setup/video-display-setup-guide)
+- 🖥️ [メディアディスプレイ設定](./tutorials/media-display-setup/media-display-setup-guide)
 - 📷 [カメラ設定](./tutorials/camera-setup/camera-setup-guide)
