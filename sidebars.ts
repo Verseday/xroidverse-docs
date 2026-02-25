@@ -56,6 +56,14 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: '🗺️ Location / Scene',
+          collapsed: false,
+          items: [
+            'tutorials/location-scene-concept',
+          ],
+        },
+        {
+          type: 'category',
           label: '🖥️ メディアディスプレイ設定',
           collapsed: false,
           items: [

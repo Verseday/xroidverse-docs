@@ -24,7 +24,7 @@ keywords: [カメラ設定, StudioCameraActor, カメラ配置, PersonSlot連携
 ## 📋 手順概要
 
 1. **StudioCameraActor の概要** - 機能と特徴の理解
-2. **カメラの配置** - レベルへの StudioCameraActor の追加とタグ設定
+2. **カメラの配置** - レベルへの StudioCameraActor の追加と Placement 設定
 3. **フォーカス設定** - PersonSlot との連携設定（オプション）
 4. **ズーム設定** - ズームイン/ズームアウトの焦点距離設定
 5. **動作確認** - エディターと PIE での確認、JSON からの操作テスト
@@ -62,20 +62,19 @@ Content Browser で以下のいずれかの方法で検索します：
 3. カメラを配置したい位置に移動
 4. 回転ツールでカメラの向きを調整
 
-### 2.3 カメラタグの設定
+### 2.3 Placement の設定
 
-JSON からカメラを操作するには、カメラにタグを設定する必要があります。
+JSON からカメラを操作するには、StudioCameraActor の `Placement` を設定する必要があります。
 
 1. レベル内で配置した StudioCameraActor を選択
-2. **Details** パネルで「tag」で検索
-3. **Actor** セクションの **Tags** の **+** ボタンを押す
-4. **Index [0]** に `Camera_番号` の形式で入力（例：`Camera_1`、`Camera_2` など）
+2. **Details** パネルで `Placement` カテゴリを開く
+3. 以下を設定
+   - `Location`: このカメラが所属する `location` を設定
+   - `Scene`: このカメラが所属する `location` 内の `scene` を設定
+   - `Identifier`: このカメラの識別子を設定（任意の文字列。例: `0`, `1`, `front`, `back`）
 
-:::warning タグの命名規則
-- `Camera_` の後に続く番号が JSON でのカメラ操作時の `number` パラメータに対応します
-- 既存のカメラと番号が重複しないように注意してください
-- 番号は連続している必要はありませんが、管理しやすいように整理することを推奨します
-:::
+`Location`/`Scene` の階層の概念は [Location と Scene の概念](../location-scene-concept) を参照してください。  
+カメラは `location + scene + identifier` で解決されるため、同一 `location + scene` 内で `identifier` が一意になるように配置します。
 
 ---
 
@@ -140,7 +139,7 @@ StudioCameraActor では、ズームイン/ズームアウト時の焦点距離�
 ### 基本設定
 - [ ] StudioCameraActor がレベル内に配置されている
 - [ ] カメラが適切な位置と向きに配置されている
-- [ ] カメラに `Camera_番号` タグが設定されている
+- [ ] カメラの `Placement`（Location/Scene/Identifier）が設定されている
 
 ### フォーカス設定（オプション）
 - [ ] Focus Target Person Slot が設定されている（キャラクターの顔にフォーカスする場合）

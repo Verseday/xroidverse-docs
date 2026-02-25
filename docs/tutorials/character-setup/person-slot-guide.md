@@ -34,7 +34,7 @@ keywords: [PersonSlot, キャラクター配置, 動的指定, 動的配置, ス
 
 ## 📋 手順概要
 
-1. **PersonSlot の配置と調整** - レベル内への PersonSlot の追加、タグ設定、プレビュー表示、位置調整
+1. **PersonSlot の配置と調整** - レベル内への PersonSlot の追加、Placement 設定、プレビュー表示、位置調整
 2. **動作確認** - セッション実行時の確認
 
 ---
@@ -60,20 +60,25 @@ Content Browser で以下のパスを開きます：
 PersonSlot には矢印コンポーネントが表示され、キャラクターの正面の向きを示します。
 :::
 
-### 1.3 PersonSlot のタグ設定
+### 1.3 PersonSlot の Placement 設定
 
-配置した PersonSlot にタグを設定します。このタグが Xroid Studio からの `persons` 配列の順序に対応します。
+配置した PersonSlot に `Placement` を設定します。この `slotIndex` が Xroid Studio からの `persons` 配列の順序に対応します。
 
 1. レベル内で配置した PersonSlot を選択
-2. **Details** パネルで「**tags**」で検索
-3. **Actor** セクション内の **Tags** の右の **+** ボタンを押す
-4. **Index [0]** に `PersonSlot_番号` の形式で入力（例：`PersonSlot_0`、`PersonSlot_1` など）
+2. **Details** パネルで `Placement` カテゴリを開く
+3. 以下を設定
+   - `Location`: この PersonSlot が所属する `location` を設定
+   - `Scene`: この PersonSlot が所属する `location` 内の `scene` を設定
+   - `SlotIndex`: この PersonSlot のインデックスを設定（非負整数。例: `0`, `1`）
 
-:::warning タグの命名規則
-- `PersonSlot_` の後に続く番号が Xroid Studio からの `persons` 配列のインデックスに対応します
-  - `PersonSlot_0` → `persons[0]`
-  - `PersonSlot_1` → `persons[1]`
-  - `PersonSlot_2` → `persons[2]`
+`Location`/`Scene` の階層の概念は [Location と Scene の概念](../location-scene-concept) を参照してください。  
+PersonSlot は `location + scene + slotIndex` で解決されるため、同一 `location + scene` 内で `slotIndex` が一意になるように配置します。
+
+:::warning `SlotIndex` の規則
+- `SlotIndex` が `persons[scene][index]` の `index` に対応します
+  - `0` → `persons["main"][0]`
+  - `1` → `persons["main"][1]`
+  - `2` → `persons["main"][2]`
 - 0 から順番に番号を付けてください
 - 番号は連続している必要があります（0, 1, 2, ...）
 :::
@@ -119,7 +124,7 @@ StudioCameraActor は、PersonSlot に配置されたキャラクターを自動
 設定が正しく完了すると、以下の状態になります：
 
 - [ ] PersonSlot がレベル内に配置されている
-- [ ] PersonSlot に適切なタグ（`PersonSlot_0`、`PersonSlot_1` など）が設定されている
+- [ ] PersonSlot の `Placement`（Location/Scene/SlotIndex）が設定されている
 - [ ] エディター上でプレビューが表示され、位置と向きが調整されている
 
 ---

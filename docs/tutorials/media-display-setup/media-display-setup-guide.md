@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 title: メディアディスプレイ設定ガイド
-description: レベル内で画像/動画を表示するための統合ディスプレイ（SM_MediaDisplay）の配置と設定方法
-keywords: [メディアディスプレイ, SM_MediaDisplay, 画像, 動画, 音声, レベル設定, A_LevelInfo]
+description: レベル内で画像/動画を表示するための統合ディスプレイ（SM_MediaDisplay）の配置と Placement 設定方法
+keywords: [メディアディスプレイ, SM_MediaDisplay, 画像, 動画, 音声, レベル設定, Placement]
 ---
 
 # メディアディスプレイ設定ガイド
@@ -10,8 +10,7 @@ keywords: [メディアディスプレイ, SM_MediaDisplay, 画像, 動画, 音�
 このドキュメントでは、XroidVerse で画像と動画を表示する統合ディスプレイ `SM_MediaDisplay` の配置・設定手順を説明します。
 
 :::info 統合仕様
-従来の `SM_ImageDisplay` / `SM_VideoDisplay` は廃止されました。  
-現在は `SM_MediaDisplay` 1つで画像・動画（動画音声を含む）を扱います。
+`SM_MediaDisplay` 1つで画像・動画（動画音声を含む）を扱います。
 :::
 
 :::info 重なり順（画像/動画）
@@ -34,7 +33,7 @@ keywords: [メディアディスプレイ, SM_MediaDisplay, 画像, 動画, 音�
 
 1. レベル内の `SM_MediaDisplay` の有無を確認
 2. 必要なら `SM_MediaDisplay` を配置
-3. `A_LevelInfo` の `MediaDisplay` に設定
+3. `Placement`（Location/Scene/Identifier）を設定
 
 ---
 
@@ -75,15 +74,17 @@ Content Browser で次のアセットを開いて配置します。
 
 ---
 
-## Step 3: A_LevelInfo との連携
+## Step 3: Placement の設定
 
-1. Outliner で `A_LevelInfo` を選択
-2. Details の `Default` セクションを開く
-3. `MediaDisplay` に配置済み `SM_MediaDisplay` を設定
+1. 設定対象の `SM_MediaDisplay` を選択
+2. **Details** パネルで `Placement` カテゴリを開く
+3. 以下を設定
+   - `Location`: この MediaDisplay が所属する `location` を設定
+   - `Scene`: この MediaDisplay が所属する `location` 内の `scene` を設定
+   - `Identifier`: この MediaDisplay の識別子を設定（任意の文字列。例: `main`, `sub`）
 
-:::tip
-`MediaDisplay` が未設定だと、画像/動画は表示されません。
-:::
+`Location`/`Scene` の階層の概念は [Location と Scene の概念](../location-scene-concept) を参照してください。  
+MediaDisplay は `location + scene + display-identifier` で解決されるため、同一 `location + scene` 内で `Identifier` が一意になるように配置します。
 
 ---
 
@@ -92,7 +93,7 @@ Content Browser で次のアセットを開いて配置します。
 以下を満たしていれば設定完了です。
 
 - レベル内に `SM_MediaDisplay` がある
-- `A_LevelInfo.MediaDisplay` がそのオブジェクトを参照している
+- `SM_MediaDisplay` の `Placement`（Location/Scene/Identifier）が設定されている
 - 画像/動画の表示と、動画音声の再生が動作する
 
 :::success
