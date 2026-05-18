@@ -26,44 +26,47 @@ keywords: [オブジェクト, object-spawn, SpawnPointActor, 配置, Placement,
 
 ## 📋 手順概要
 
-1. レベル内に `SpawnPointActor` を新規配置
-2. `Placement`（Location/Scene/Identifier）を設定
-3. トランスフォーム（位置・回転・スケール）の調整
+1. **SpawnPointActor の配置と調整** - レベル内への SpawnPointActor の追加、Placement 設定、トランスフォームの調整
 
 ---
 
-## 🛠️ Step 1: SpawnPointActor の配置
+## 📍 Step 1: SpawnPointActor の配置と調整
 
-Content Browser で次のアセットを検索してレベルに配置します。
+### 1.1 SpawnPointActor の検索
+
+Content Browser で以下のパスを開きます：
 
 ```text
-/All/Game/Xroid/SpawnPoint/SpawnPointActor
+/All/C++ Classes/XroidVerseContentGeneration/Actors/SpawnPointActor
 ```
 
-（※プロジェクトの構成によっては `C++ Classes > XroidVerseContentGeneration > Actors` 配下から配置してください）
+または、Content Browser の検索欄で `SpawnPointActor` と入力します。
+
+### 1.2 レベルへの配置
+
+1. `SpawnPointActor` を、レベルのビューポートにドラッグ&ドロップ
+2. オブジェクトを出現させたい位置に移動
 
 :::tip 配置のコツ
 - 出現させたいオブジェクトの原点（ピボット）が `SpawnPointActor` の位置になります。
 - 宙に浮かせたい場合や、地面にぴったりつけたい場合は、それに合わせてZ軸（高さ）を調整してください。
 :::
 
----
+### 1.3 Placement の設定
 
-## ⚙️ Step 2: Placement の設定
+配置した SpawnPointActor に `Placement` を設定します。この `Identifier` がスケジュールJSONでの指定先になります。
 
-1. レベルに配置した `SpawnPointActor` を選択します。
-2. **Details** パネルで `Placement` カテゴリを開きます。
-3. 以下を設定します。
+1. レベル内で配置した SpawnPointActor を選択
+2. **Details** パネルで `Placement` カテゴリを開く
+3. 以下を設定
    - `Location`: この SpawnPointActor が所属する `location` を設定
    - `Scene`: この SpawnPointActor が所属する `location` 内の `scene` を設定
-   - `Identifier`: この SpawnPointActor の識別子を設定（任意の文字列。例: `apple`, `table`, `item_01`）
+   - `Identifier`: この SpawnPointActor の識別子を設定（任意の文字列。例: `desktop_r`, `desktop_l`）
 
 `Location`/`Scene` の階層の概念は [Location と Scene の概念](../location-scene-concept) を参照してください。  
 動的オブジェクト（`object-spawn`）は `location + scene + Identifier` の組み合わせで出現位置が解決されるため、同一 `location + scene` 内で `Identifier` が一意になるように配置してください。
 
----
-
-## 📐 Step 3: トランスフォームの調整
+### 1.4 トランスフォームの調整
 
 配置した `SpawnPointActor` 自体のトランスフォーム（位置・回転・スケール）は、出現するオブジェクトにそのまま反映されます。
 
