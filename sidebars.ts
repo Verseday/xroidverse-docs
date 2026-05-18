@@ -72,6 +72,14 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: '📦 動的オブジェクト配置',
+          collapsed: false,
+          items: [
+            'tutorials/object-setup/object-spawn-guide',
+          ],
+        },
+        {
+          type: 'category',
           label: '📷 カメラ設定',
           collapsed: false,
           items: [
