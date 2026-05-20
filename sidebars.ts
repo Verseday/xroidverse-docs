@@ -72,7 +72,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: '📦 動的オブジェクト配置',
+          label: '📦 動的オブジェクト・エフェクト配置',
           collapsed: false,
           items: [
             'tutorials/object-setup/object-spawn-guide',

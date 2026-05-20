@@ -1,16 +1,16 @@
 ---
 sidebar_position: 1
-title: 動的オブジェクト配置ガイド
-description: レベル内でFBXなどの3Dモデルを動的に出現させるための SpawnPointActor の配置と Placement 設定方法
-keywords: [オブジェクト, object-spawn, SpawnPointActor, 配置, Placement, FBX]
+title: 動的オブジェクト・エフェクト配置ガイド
+description: レベル内でFBXなどの3Dモデルやエフェクトを動的に出現させるための SpawnPointActor の配置と Placement 設定方法
+keywords: [オブジェクト, object-spawn, effect-spawn, SpawnPointActor, 配置, Placement, FBX, Niagara]
 ---
 
-# 動的オブジェクト配置ガイド
+# 動的オブジェクト・エフェクト配置ガイド
 
-このドキュメントでは、XroidVerse でFBXなどの3Dモデルを動的に出現させるための `SpawnPointActor` の配置・設定手順を説明します。
+このドキュメントでは、XroidVerse でFBXなどの3Dモデルやエフェクトを動的に出現させるための `SpawnPointActor` の配置・設定手順を説明します。
 
-:::info 動的オブジェクト生成（object-spawn）
-`SpawnPointActor` を配置しておくことで、Xroid Studio 等から指定された 3Dモデル（FBX等）を任意のタイミングでその場所に出現させることができます。
+:::info 動的生成（object-spawn / effect-spawn）
+`SpawnPointActor` を配置しておくことで、Xroid Studio 等から指定された 3Dモデル（FBX等）やエフェクト（Niagara等）を任意のタイミングでその場所に出現させることができます。
 :::
 
 :::info 所要時間
@@ -64,11 +64,11 @@ Content Browser で以下のパスを開きます：
    - `Identifier`: この SpawnPointActor の識別子を設定（任意の文字列。例: `desktop_r`, `desktop_l`）
 
 `Location`/`Scene` の階層の概念は [Location と Scene の概念](../location-scene-concept) を参照してください。  
-動的オブジェクト（`object-spawn`）は `location + scene + Identifier` の組み合わせで出現位置が解決されるため、同一 `location + scene` 内で `Identifier` が一意になるように配置してください。
+動的オブジェクト（`object-spawn`）やエフェクト（`effect-spawn`）は `location + scene + Identifier` の組み合わせで出現位置が解決されるため、同一 `location + scene` 内で `Identifier` が一意になるように配置してください。
 
 ### 1.4 トランスフォームの調整
 
-配置した `SpawnPointActor` 自体のトランスフォーム（位置・回転・スケール）は、出現するオブジェクトにそのまま反映されます。
+配置した `SpawnPointActor` 自体のトランスフォーム（位置・回転・スケール）は、出現するオブジェクトやエフェクトにそのまま反映されます。
 
 1. **Details** パネルで `Transform` カテゴリを開きます。
 2. オブジェクトを出現させたい向きに合わせて `Rotation` を変更します。
@@ -84,5 +84,5 @@ Content Browser で以下のパスを開きます：
 - `SpawnPointActor` の `Placement`（Location/Scene/Identifier）が正しく設定されている
 
 :::success
-これで動的オブジェクトの配置先（SpawnPoint）の設定は完了です。Xroid Studio 等のスケジュールから、この Identifier を指定してオブジェクトを出現させることができます。
+これで動的オブジェクト・エフェクトの配置先（SpawnPoint）の設定は完了です。Xroid Studio 等のスケジュールから、この Identifier を指定してオブジェクトやエフェクトを出現させることができます。
 :::
