@@ -60,6 +60,7 @@ const sidebars: SidebarsConfig = {
           collapsed: false,
           items: [
             'tutorials/location-scene-concept',
+            'tutorials/cesium-studio-stage-guide',
           ],
         },
         {

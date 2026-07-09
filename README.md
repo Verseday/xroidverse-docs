@@ -1,6 +1,6 @@
-# XroidVerse 開発者ドキュメント
+# XroidVerse ユーザーマニュアル
 
-このディレクトリ（`dev-docs`）には、XroidVerseプロジェクトの開発者向けドキュメントサイト（Docusaurus）が含まれています。
+このディレクトリ（`xroidverse-docs`）には、XroidVerseプロジェクトの**ユーザー向け**ドキュメントサイト（Docusaurus）が含まれています。
 
 ## 📋 前提条件
 
@@ -21,22 +21,22 @@ Docusaurusを実行するには、Node.js（バージョン18.0以上）が必�
 
 ### 依存関係のインストール
 
-`dev-docs`ディレクトリ内で、初回セットアップ時は必要なパッケージをインストールします：
+`xroidverse-docs`ディレクトリ内で、初回セットアップ時は必要なパッケージをインストールします：
 
 ```bash
 # XroidVerseプロジェクトのルートから
-cd dev-docs
+cd xroidverse-docs
 npm install
 ```
 
 ## 🚀 サイトの起動
 
-**注意**: 以下のコマンドはすべて `dev-docs` ディレクトリ内で実行してください。
+**注意**: 以下のコマンドはすべて `xroidverse-docs` ディレクトリ内で実行してください。
 
 ### 開発サーバーの起動
 
 ```bash
-# dev-docs ディレクトリ内で実行
+# xroidverse-docs ディレクトリ内で実行
 npm start
 ```
 
@@ -45,7 +45,7 @@ npm start
 ### 本番用ビルド
 
 ```bash
-# dev-docs ディレクトリ内で実行
+# xroidverse-docs ディレクトリ内で実行
 npm run build
 ```
 
@@ -54,7 +54,7 @@ npm run build
 ### ビルドの確認
 
 ```bash
-# dev-docs ディレクトリ内で実行
+# xroidverse-docs ディレクトリ内で実行
 npm run serve
 ```
 
@@ -63,7 +63,7 @@ npm run serve
 ### コントラスト/境界の自動検査
 
 ```bash
-# dev-docs ディレクトリ内で実行
+# xroidverse-docs ディレクトリ内で実行
 npm run lint:contrast
 ```
 
@@ -72,55 +72,56 @@ npm run lint:contrast
 ### 推奨の検証コマンド
 
 ```bash
-# dev-docs ディレクトリ内で実行
+# xroidverse-docs ディレクトリ内で実行
 npm run verify
 ```
 
 ## 📁 ディレクトリ構造
 
-`dev-docs` ディレクトリ内の構造：
+`xroidverse-docs` ディレクトリ内の構造：
 
 ```text
-dev-docs/                     # このディレクトリ
+xroidverse-docs/              # このディレクトリ
 ├── docs/                     # ドキュメントファイル
-│   ├── intro.md             # トップページ
-│   ├── architecture.md      # アーキテクチャガイド
-│   └── tutorials/           # チュートリアル
-│       ├── character-setup/ # キャラクター設定
+│   ├── intro.md              # トップページ
+│   ├── user-manual.md        # 操作マニュアル
+│   └── tutorials/            # チュートリアル
+│       ├── character-setup/  # キャラクター設定
 │       ├── expression-setup/ # 表情設定
-│       └── motion-setup/    # モーション設定
-├── static/                  # 静的ファイル
-│   └── img/                # ドキュメント用画像
-├── src/                    # React コンポーネント
-├── docusaurus.config.ts    # サイト設定
-├── sidebars.ts            # サイドバー設定
-├── package.json           # 依存関係
-└── README.md              # このファイル
+│       ├── motion-setup/     # モーション設定
+│       └── cesium-studio-stage-guide.md  # Cesium Studio ステージ設定
+├── static/                   # 静的ファイル
+│   └── img/                  # ドキュメント用画像
+├── src/                      # React コンポーネント
+├── docusaurus.config.ts      # サイト設定
+├── sidebars.ts               # サイドバー設定
+├── package.json              # 依存関係
+└── README.md                 # このファイル
 ```
 
 ## 🚀 クイックスタート
 
-初めて `dev-docs` のドキュメントサイトを使用する場合の手順：
+初めて `xroidverse-docs` のドキュメントサイトを使用する場合の手順：
 
 1. **Node.js のインストール**（上記参照）
-2. **dev-docs ディレクトリに移動**
+2. **xroidverse-docs ディレクトリに移動**
 
    ```bash
    # XroidVerseプロジェクトのルートから
-   cd dev-docs
+   cd xroidverse-docs
    ```
 
 3. **依存関係のインストール**
 
    ```bash
-   # dev-docs ディレクトリ内で実行
+   # xroidverse-docs ディレクトリ内で実行
    npm install
    ```
 
 4. **開発サーバーの起動**
 
    ```bash
-   # dev-docs ディレクトリ内で実行
+   # xroidverse-docs ディレクトリ内で実行
    npm start
    ```
 
@@ -160,11 +161,12 @@ dev-docs/                     # このディレクトリ
 ### 既存のドキュメント
 
 - **イントロダクション**: プロジェクト概要とクイックスタート
-- **アーキテクチャガイド**: Sourceフォルダの構造とモジュール設計
+- **操作マニュアル**: XroidVerse の基本的な使い方
 - **チュートリアル**:
   - キャラクター設定ガイド
   - 表情設定ガイド
   - モーション設定ガイド
+  - **Cesium Studio ステージ設定ガイド**（`initial_environment.cesium` を使った初期環境適用）
 
 ### 技術仕様
 
@@ -199,7 +201,7 @@ dev-docs/                     # このディレクトリ
 
 ### よくある問題
 
-**注意**: 以下のコマンドはすべて `dev-docs` ディレクトリ内で実行してください。
+**注意**: 以下のコマンドはすべて `xroidverse-docs` ディレクトリ内で実行してください。
 
 1. **Node.js がインストールされていない**
 
@@ -212,14 +214,14 @@ dev-docs/                     # このディレクトリ
 
    ```bash
    # エラー例: Cannot find module...
-   # dev-docs ディレクトリ内で実行
+   # xroidverse-docs ディレクトリ内で実行
    npm install
    ```
 
 3. **開発サーバーが起動しない**
 
    ```bash
-   # dev-docs ディレクトリ内で実行
+   # xroidverse-docs ディレクトリ内で実行
    npm install
    npm start
    ```
@@ -236,7 +238,7 @@ dev-docs/                     # このディレクトリ
 6. **キャッシュの問題**
 
    ```bash
-   # dev-docs ディレクトリ内で実行
+   # xroidverse-docs ディレクトリ内で実行
    npm run clear
    npm start
    ```
@@ -244,7 +246,7 @@ dev-docs/                     # このディレクトリ
 7. **ポートが使用中**
 
    ```bash
-   # dev-docs ディレクトリ内で実行
+   # xroidverse-docs ディレクトリ内で実行
    npm start -- --port 3001
    ```
 
