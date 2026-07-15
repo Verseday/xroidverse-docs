@@ -32,6 +32,10 @@ keywords: [Cesium Studio, initial_environment, cesium, LevelInfo, StageRootActor
 | `cesium.localTime.minute`        | integer   | 0 .. 59        | `CesiumSunSky.SolarTime` の分（SolarTime は `hour + minute/60`） |
 | `cesium.stage.heightMeters`      | number    | `>= 0`         | `TerrainHeightTileset` の地形高に加算するメートル数       |
 
+:::note timezone について
+timezone は JSON では指定しません。XroidVerse が `coordinates.longitude` から経度ベースの近似 timezone offset を自動算出し、CesiumSunSky に反映します。夏時間や行政上の厳密な timezone 境界は判定しません。
+:::
+
 `stage.heightMeters` は「`TerrainHeightTileset` から取得した地形高を基準に、その何メートル上へステージ基準のアクターを配置するか」を指定します。
 
 ## LevelInfo の参照設定
